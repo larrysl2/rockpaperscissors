@@ -1,3 +1,5 @@
+var p=0;
+var c=0;
 function getComputerChoice()
 {
     x=Math.floor(Math.random()*3);
@@ -13,65 +15,72 @@ function getComputerChoice()
         {
             return 'SCISSORS';
         }
+        
 }
-    
+function playerSelections(){
     let playerSelection = '';
     var ps=0
     do
     {
-        let playerSelections = prompt("Select rock, paper or scissors")
-        let playerSelection = playerSelections.toUpperCase();
+        let playerSelectionU = prompt("Select rock, paper or scissors")
+         playerSelection = playerSelectionU.toUpperCase();
         if((playerSelection == 'ROCK' || playerSelection =='PAPER' || playerSelection == 'SCISSORS'|| playerSelection==null))
         {
             ps =1
+            
         }
+        
     } while(ps!=1);
-    console.log(playerSelection);
-    
-function playRound(playerSelection, computerselection)
+    return playerSelection;
+}
+   
+   
+function playRound(playerSelections, computerselection)
 {
-    var p=0;
-    var c=0;
+    
     switch(true )
     {
-        case playerSelection=== computerselection:
-        console.log( "Tie!");
+        case playerSelections=== computerselection:
+        return "Tie!";
         break;
 
-        case ((playerSelection === 'ROCK' && computerselection=== 'PAPER') ||(playerSelection === 'SCISSORS' && computerselection=== 'ROCK') ||(playerSelection === 'PAPER' && computerselection==='SCISSORS')):
+        case ((playerSelections === 'ROCK' && computerselection=== 'PAPER') ||(playerSelections === 'SCISSORS' && computerselection=== 'ROCK') ||(playerSelections === 'PAPER' && computerselection==='SCISSORS')):
         {
         c++;
-        console.log("You Lose! + computerselection+ beats +playerSelection+");
+        return ("You Lose! " + computerselection+ " beats " +playerSelections);
         break;
         }
        
-        case ((playerSelection === 'ROCK' && computerselection=== 'SCISSORS') ||(playerSelection === 'SCISSORS' && computerselection=== 'PAPER') ||(playerSelection === 'PAPER' && computerselection==='ROCK')):
+        case ((playerSelections === 'ROCK' && computerselection=== 'SCISSORS') ||(playerSelections === 'SCISSORS' && computerselection=== 'PAPER') ||(playerSelections === 'PAPER' && computerselection==='ROCK')):
         {
-        c++;
-        console.log( "You Win! + playerSelection+ beats + computerselection+");
+        p++;
+        return ( "You Win! " + playerSelections+ " beats " + computerselection);
         break;
         }
     }
 }
     
     const computerselection = getComputerChoice();
-    console.log(playRound(playerSelection, computerselection));
+    
+    
 function game()
 {
     for (let i = 0; i < 5; i++) 
         {
-            playroud();
+            playRound((playerSelections(), computerselection));
+            console.log(playRound());
         }
     if(c>p)
         {
-            console.log( "Loser");
+            return( "Loser");
         }
     else if(p>c)
         {
-            console.log( "Winner");
+            return( "Winner");
         }
     else
         {
-            console.log("Tie");
+            return ("Tie");
         }
 }
+console.log(game());
