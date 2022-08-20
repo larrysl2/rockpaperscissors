@@ -5,19 +5,22 @@ function getComputerChoice()
     x=Math.floor(Math.random()*3);
     if (x==0)
         {
+            console.log("cpuock");
             return 'ROCK';
         }
     else if (x==1)
         {
+            console.log("cpupaper");
             return 'PAPER';
         }
     else 
         {
+            console.log("cpuscissor");
             return 'SCISSORS';
         }
         
 }
-function playerSelections(){
+function playerSelectionf(){
     let playerSelection = '';
     var ps=0
     do
@@ -31,16 +34,22 @@ function playerSelections(){
         }
         
     } while(ps!=1);
+    console.log(playerSelection);
     return playerSelection;
+    
 }
    
-   
+const computerselection = getComputerChoice();
+const playerSelections = playerSelectionf() 
+console.log(playRound(playerSelections, computerselection));
 function playRound(playerSelections, computerselection)
 {
     
     switch(true )
     {
+        
         case playerSelections=== computerselection:
+        console.log(playerSelections);
         return "Tie!";
         break;
 
@@ -60,14 +69,16 @@ function playRound(playerSelections, computerselection)
     }
 }
     
-    const computerselection = getComputerChoice();
+    
     
     
 function game()
 {
+    const computerselection = getComputerChoice();
+    const playerSelections = playerSelectionf() 
     for (let i = 0; i < 5; i++) 
         {
-            playRound((playerSelections(), computerselection));
+            playRound((playerSelections, computerselection));
             console.log(playRound());
         }
     if(c>p)
