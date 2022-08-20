@@ -5,17 +5,17 @@ function getComputerChoice()
     x=Math.floor(Math.random()*3);
     if (x==0)
         {
-            console.log("cpuock");
+            console.log("CPU selected Rock");
             return 'ROCK';
         }
     else if (x==1)
         {
-            console.log("cpupaper");
+            console.log("CPU selected Paper");
             return 'PAPER';
         }
     else 
         {
-            console.log("cpuscissor");
+            console.log("CPU selected Scissor");
             return 'SCISSORS';
         }  
 }
@@ -44,18 +44,18 @@ function playRound(playerSelections, computerselection)
     {
         
         case playerSelections=== computerselection:
-        console.log(playerSelections+" playround");
+        console.log(playerSelections);
         console.log( "Tie!");
         break;
         
         case ((playerSelections === 'ROCK' && computerselection=== 'PAPER') ||(playerSelections === 'SCISSORS' && computerselection=== 'ROCK') ||(playerSelections === 'PAPER' && computerselection==='SCISSORS')):
-            console.log(playerSelections+" playroundloss");
+            console.log(playerSelections);
         c++;
         console.log ("You Lose! " + computerselection+ " beats " +playerSelections);
         break;
        
         case ((playerSelections === 'ROCK' && computerselection=== 'SCISSORS') ||(playerSelections === 'SCISSORS' && computerselection=== 'PAPER') ||(playerSelections === 'PAPER' && computerselection==='ROCK')):
-            console.log(playerSelections+" playroundwin");
+            console.log(playerSelections);
         p++;
         console.log ( "You Win! " + playerSelections+ " beats " + computerselection);
         break;
@@ -64,24 +64,24 @@ function playRound(playerSelections, computerselection)
     }
 }
 
-function game()
-{
-    for (let i = 0; i < 5; i++) 
-        {
-            playRound(playerSelectionf(), getComputerChoice());
+// function game()
+// {
+//     for (let i = 0; i < 5; i++) 
+//         {
+//             playRound(playerSelectionf(), getComputerChoice());
             
-        }
-    if(c>p)
-        {
-            return( "Loser");
-        }
-    else if(p>c)
-        {
-            return( "Winner");
-        }
-    else
-        {
-            return ("Tie");
-        }
-}
- console.log(game()+" game outcome");
+//         }
+//     if(c>p)
+//         {
+//             return( "Loser");
+//         }
+//     else if(p>c)
+//         {
+//             return( "Winner");
+//         }
+//     else
+//         {
+//             return ("Tie");
+//         }
+// }
+//  console.log(game()+" game outcome");
