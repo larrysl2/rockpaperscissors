@@ -63,7 +63,7 @@ function playRound(playerSelections, computerselection)
         
     }
 }
-
+//
 // function game()
 // {
 //     for (let i = 0; i < 5; i++) 
