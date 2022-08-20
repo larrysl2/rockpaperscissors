@@ -17,8 +17,7 @@ function getComputerChoice()
         {
             console.log("cpuscissor");
             return 'SCISSORS';
-        }
-        
+        }  
 }
 function playerSelectionf(){
     let playerSelection = '';
@@ -32,16 +31,12 @@ function playerSelectionf(){
             ps =1
             
         }
-        
     } while(ps!=1);
-    console.log(playerSelection);
     return playerSelection;
     
 }
    
-const computerselection = getComputerChoice();
-const playerSelections = playerSelectionf() 
-console.log(playRound(playerSelections, computerselection));
+
 function playRound(playerSelections, computerselection)
 {
     
@@ -49,37 +44,32 @@ function playRound(playerSelections, computerselection)
     {
         
         case playerSelections=== computerselection:
-        console.log(playerSelections);
-        return "Tie!";
+        console.log(playerSelections+" playround");
+        console.log( "Tie!");
         break;
-
+        
         case ((playerSelections === 'ROCK' && computerselection=== 'PAPER') ||(playerSelections === 'SCISSORS' && computerselection=== 'ROCK') ||(playerSelections === 'PAPER' && computerselection==='SCISSORS')):
-        {
+            console.log(playerSelections+" playroundloss");
         c++;
-        return ("You Lose! " + computerselection+ " beats " +playerSelections);
+        console.log ("You Lose! " + computerselection+ " beats " +playerSelections);
         break;
-        }
        
         case ((playerSelections === 'ROCK' && computerselection=== 'SCISSORS') ||(playerSelections === 'SCISSORS' && computerselection=== 'PAPER') ||(playerSelections === 'PAPER' && computerselection==='ROCK')):
-        {
+            console.log(playerSelections+" playroundwin");
         p++;
-        return ( "You Win! " + playerSelections+ " beats " + computerselection);
+        console.log ( "You Win! " + playerSelections+ " beats " + computerselection);
         break;
-        }
+       
+        
     }
 }
-    
-    
-    
-    
+
 function game()
 {
-    const computerselection = getComputerChoice();
-    const playerSelections = playerSelectionf() 
     for (let i = 0; i < 5; i++) 
         {
-            playRound((playerSelections, computerselection));
-            console.log(playRound());
+            playRound(playerSelectionf(), getComputerChoice());
+            
         }
     if(c>p)
         {
@@ -94,4 +84,4 @@ function game()
             return ("Tie");
         }
 }
-console.log(game());
+ console.log(game()+" game outcome");
