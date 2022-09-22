@@ -1,0 +1,73 @@
+h1
+{
+    display:flex;
+    color:#DDB8A6 ;
+    font-size: 50px;
+    font-family: arial;
+    background-color:#7297a0;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width:100%;
+}
+.rock{
+    background:url(./images/rock.jpeg) no-repeat;
+    cursor:pointer;
+    border:none;
+    height:500px;
+    width:500px;
+    background-size: 500px 500px;
+    margin:10px;
+}
+.paper{
+    background:url(./images/winnie.jpg) no-repeat;
+    cursor:pointer;
+    border:none;
+    height:500px;
+    width:500px;
+    background-size: 500px 500px;
+    margin:10px;
+}
+.scissors{
+    background:url(./images/scissor.jpeg) no-repeat;
+    cursor:pointer;
+    border:none;
+    height:500px;
+    width:500px;
+    background-size: 500px 500px;
+    margin:10px;
+}
+.buttons
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom
+{
+    display:flex;
+}
+.left
+{
+    display:inline-flex;
+    width:50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#DDB8A6 ;
+    font-size: 50px;
+    font-family: arial;
+    background-color:#7297a0;
+}
+.right
+{
+    display:inline-flex;
+    width:50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#DDB8A6 ;
+    font-size: 50px;
+    font-family: arial;
+    background-color:#7297a0;
+}
